@@ -1,7 +1,8 @@
 # AIRL Lab Assignment — Vision Transformer & SAM2
 
 This repository contains my submission for the AIRL Lab assignment.  
-Implemented fully in **Google Colab**. Repo contains only:
+Implemented **completely in Google Colab with GPU enabled**.  
+Repo contains only:
 
 - `q1.ipynb` → Vision Transformer on CIFAR-10  
 - `q2.ipynb` → Text-Driven Image Segmentation with SAM2  
@@ -17,10 +18,11 @@ Based on the paper: *"An Image is Worth 16x16 Words: Transformers for Image Reco
 
 ---
 
-## ⚙️ How to Run in Colab
+## ⚙️ How to Run in Colab (GPU)
 1. Open `q1.ipynb` in Google Colab.  
-2. Run all cells sequentially.  
-3. The notebook will:  
+2. Ensure **Runtime → Change Runtime Type → GPU** is enabled.  
+3. Run all cells sequentially.  
+4. The notebook will:  
    - Load CIFAR-10 dataset (50k train, 10k test).  
    - Train a pretrained ViT (Tiny, patch size 16).  
    - Evaluate on the test set.  
@@ -33,6 +35,7 @@ Based on the paper: *"An Image is Worth 16x16 Words: Transformers for Image Reco
 - Batch size: 128  
 - Epochs: 2 (demo in Colab; can extend to 20+ for higher accuracy)  
 - Loss: CrossEntropyLoss  
+- Device: **Google Colab GPU (CUDA)**  
 
 ---
 
@@ -72,11 +75,12 @@ Perform **text-prompted segmentation** of an object in an image using SAM2 with 
 
 ---
 
-## 🔧 How to Run
+## 🔧 How to Run in Colab (GPU)
 1. Open `q2.ipynb` in Colab.  
-2. Run install cells (`segment-anything`, `groundingdino`).  
-3. Provide image + text prompt.  
-4. Run all → segmented mask overlay will be displayed.  
+2. Ensure **Runtime → Change Runtime Type → GPU** is enabled.  
+3. Run install cells (`segment-anything`, `groundingdino`).  
+4. Provide image + text prompt.  
+5. Run all → segmented mask overlay will be displayed.  
 
 ---
 
@@ -98,6 +102,7 @@ Extend segmentation to **video clips** (10–30s) by propagating SAM2 masks acro
 - Model: SAM2 ViT-B (faster than ViT-H).  
 - Bounding box detected once with GroundingDINO.  
 - SAM2 propagated masks across ~200–300 frames (~10–12s clip).  
+- Executed on **Google Colab GPU** for faster inference.  
 
 ---
 
