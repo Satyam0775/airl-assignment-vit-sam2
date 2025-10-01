@@ -127,3 +127,11 @@ Extend segmentation to **video clips** (10–30s) by propagating SAM2 masks acro
 - ✅ Bonus: Video segmentation demo (~12s clip).  
 
 ---
+
+## 📂 Additional Resources (optional)
+
+You can view my full Colab notebooks and files here (Google Drive):  
+[Drive Folder — Colab Notebooks & Data](https://drive.google.com/drive/folders/1rpQlWcvFmS107E3tWavr1IDP2SGoQLyk?usp=sharing)  
+
+> ⚠️ This is optional and for reference only. The official submission is via GitHub repository.
+
